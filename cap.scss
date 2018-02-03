@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+@import "hamburger.scss";
+.header{
+    width: 1920px;
+    padding: 0 22px;
+    min-height: 56px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+    &__hamburger{
+        display: none;
+        @media only screen and (max-width: 414px) {
+        display: block;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background: rgb(72, 118, 195);
+        width: 100%;
+        min-height: 56px;
+    }
+    &__logo{
+       
+        background: url('img/logo.png') no-repeat 50% 60%;
+        width: 193px;
+        min-height: 56px;
+        @media only screen and (max-width: 1024px) {
+            background: url('img/logoipad1.png') no-repeat 50% 65%;
+        width: 145px;
+        min-height: 56px;
+        }
+        @media only screen and (max-width: 414px) {
+            margin-left: 38px;
+            background: url('img/logoiphone.png') no-repeat 50% 65%;
+        width: 177px;
+        min-height: 56px;
+            
+        }
+    }
+ 
+    &__nav{
+        margin-left: 112px;
+        width: 825px;
+        display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            align-items: center;
+            @media only screen and (max-width: 1440px) {
+                margin-left: 86px;
+               
+            }
+            @media only screen and (max-width: 1366px) {
+                margin-left: 86px;
+               
+            }
+            @media only screen and (max-width: 1280px) {
+                margin-left: 45px;
+                width: 750px;
+            }
+            @media only screen and (max-width: 1024px) {
+                margin-left: 40px;
+                width: 603px;
+               
+            }
+            @media only screen and (max-width: 414px) {
+                margin-left: 135px;
+                width: 18px;
+            }
+            
+        &_menu{
+            width: 715px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:space-between;
+            align-items: center;
+            @media only screen and (max-width: 1440px) {
+                width: 710px;
+               
+            }
+            @media only screen and (max-width: 1366px) {
+                width: 710px;
+               
+            }
+            @media only screen and (max-width: 1280px) {
+                width: 650px;
+            }
+            @media only screen and (max-width: 1024px) {
+                width: 512px;
+                @media only screen and (max-width: 414px) {
+                    display: none;
+                    }
+               
+            }
+            &_item a{
+                color: white;
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                @media only screen and (max-width: 1024px) {
+                    font-size: 14px;
+                }
+                
+            }
+            &_item img{
+               margin-bottom: 2px;
+               margin-left: 9px;
+               @media only screen and (max-width: 1024px) {
+                margin-left: 1px;
+                margin-bottom: 1px;
+                }
+            }
+
+        }
+        &_search{
+            width: 18px;
+            height: 18px;
+        }
+        &_circle{
+            width: 20px;
+            height: 20px;
+            @media only screen and (max-width: 414px) {
+                display: none;
+                }
+            
+        }
+    } 
+    
+    &__alert{
+        margin-left: 625px;
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    @media only screen and (max-width: 1440px) {
+        margin-left: 100px;
+    }
+    @media only screen and (max-width: 1280px) {
+        margin-left: 80px;
+    }
+        @media only screen and (max-width: 1366px) {
+            margin-left: 100px;
+        }
+        
+        @media only screen and (max-width: 1024px) {
+            margin-left: 70px;
+        }
+        @media only screen and (max-width: 414px) {
+            margin: 0;
+            margin-bottom: 12px;
+            }
+       
+        &_mail{
+          
+            margin-top: 2px; 
+           padding-right: 25px;
+           @media only screen and (max-width: 414px) {
+            margin-left: 48px;
+            padding: 0;
+            }
+        }
+        &_bell{
+            margin-bottom: 2px; 
+            height: 19px;
+            padding-right: 20px;
+            @media only screen and (max-width: 414px) {
+                margin-left: 110px;
+                padding: 0;
+                }
+        }
+        &_layer{
+            
+         
+            background: url('img/layer.png') no-repeat ;
+            width: 32px;
+            height: 32px;
+            @media only screen and (max-width: 414px) {
+                margin-left: 95px;
+                padding: 0;
+                }
+        }
+    }
+}
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-20{
+    font-size: 20px;
+}
