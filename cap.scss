@@ -66,8 +66,8 @@ body{
                
             }
             @media only screen and (max-width: 1280px) {
-                margin-left: 45px;
-                width: 750px;
+                margin-left: 80px;
+                width: 603px;
             }
             @media only screen and (max-width: 1024px) {
                 margin-left: 40px;
@@ -95,20 +95,22 @@ body{
                
             }
             @media only screen and (max-width: 1280px) {
-                width: 650px;
+                width: 512px;
             }
             @media only screen and (max-width: 1024px) {
-                width: 512px;
-                @media only screen and (max-width: 414px) {
-                    display: none;
-                    }
-               
+                width: 512px; 
             }
+            @media only screen and (max-width: 414px) {
+                display: none;
+                }
             &_item a{
                 color: white;
                 text-decoration: none;
                 font-family: 'Roboto', sans-serif;
                 font-size: 16px;
+                @media only screen and (max-width: 1280px) {
+                    font-size: 14px;
+                }
                 @media only screen and (max-width: 1024px) {
                     font-size: 14px;
                 }
@@ -139,6 +141,12 @@ body{
         &_form{
             width: 783px;
             position: relative;
+            @media only screen and (max-width: 1280px) {
+                width: 570px; 
+            }
+            @media only screen and (max-width: 1024px) {
+                width: 570px; 
+            }
             &-text{
                 
                 height: 40px;
@@ -146,6 +154,13 @@ body{
                 padding: 0;
             margin: 0;
                 width: 705px;
+                @media only screen and (max-width: 1280px) {
+                    width: 500px; 
+                }
+                @media only screen and (max-width: 1024px) {
+                    width: 500px; 
+                }
+                
             }
             &-btn{
                 padding: 0;
@@ -158,6 +173,12 @@ body{
                 background: rgb(255, 193, 32);
                 font-size: 13px;
                 font-family: "Roboto";
+                @media only screen and (max-width: 1280px) {
+                    width: 70px; 
+                }
+                @media only screen and (max-width: 1024px) {
+                    width: 70px; 
+                }
             }
         }
         &_form input#search{
@@ -189,11 +210,12 @@ body{
     @media only screen and (max-width: 1440px) {
         margin-left: 100px;
     }
-    @media only screen and (max-width: 1280px) {
-        margin-left: 80px;
-    }
+    
         @media only screen and (max-width: 1366px) {
             margin-left: 100px;
+        }
+        @media only screen and (max-width: 1280px) {
+            margin-left: 230px;
         }
         
         @media only screen and (max-width: 1024px) {
