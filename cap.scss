@@ -49,6 +49,7 @@ body{
     }
  
     &__nav{
+        position: relative;
         margin-left: 112px;
         width: 825px;
         display: flex;
@@ -135,6 +136,47 @@ body{
                 }
             
         }
+        &_form{
+            width: 783px;
+            position: relative;
+            &-text{
+                
+                height: 40px;
+                border: none;
+                padding: 0;
+            margin: 0;
+                width: 705px;
+            }
+            &-btn{
+                padding: 0;
+                padding-top:  1px;
+                margin-left: -5px;
+                height: 40px;
+               border: none;
+                width: 75px;
+                color: white;
+                background: rgb(255, 193, 32);
+                font-size: 13px;
+                font-family: "Roboto";
+            }
+        }
+        &_form input#search{
+            padding-left: 38px;
+            -webkit-appearance: none;
+            padding-right: 25px;
+
+        }
+        &_form .icon{
+            margin-left: 12px;
+            position: absolute;
+            top: 11px;
+        }
+        &_form .clear{
+            position: absolute;
+            top: 13px;
+            right: 85px;
+        }
+        
     } 
     
     &__alert{
@@ -199,3 +241,12 @@ body{
 .material-icons.md-20{
     font-size: 20px;
 }
+.md-grey{
+    color: rgb(193, 193, 193);
+}
+.md-14{
+    font-size: 14px;
+}
+.md-blue{
+    color: rgb(68, 79, 98);
+} 

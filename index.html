@@ -506,7 +506,7 @@
     <script src="index.js"></script>
     <link rel="stylesheet" href="cap.css">
 </head>
-<body>
+<body ng-app="">
     <div class="header__wrapper">
         <div class="header">
             <div class="header__hamburger">
@@ -548,65 +548,74 @@
             
                 </ul>
             </div>
-            <div class="header__logo"></div>
-            
-                <div class="header__nav">
-                    <div class="header__nav_menu">
-                        <div class="header__nav_menu_item">
-                            <a href="">Ссылки
-                                <img src="img/dropdown.png" alt="" width="10" height="6">
-                            </a>
-                        </div>
-                        <div class="header__nav_menu_item">
-                            <a href="">Контакты </a>
-                        </div>
-                        <div class="header__nav_menu_item">
-                            <a href="">Теги
-                                <img src="img/dropdown.png" alt="" width="10" height="6">
-                            </a>
-                        </div>
-                        <div class="header__nav_menu_item">
-                            <a href="">Просьбы
-                                <img src="img/dropdown.png" alt="" width="10" height="6">
-                            </a>
-                        </div>
-                        <div class="header__nav_menu_item">
-                            <a href="">Избранное
-                                <img src="img/dropdown.png" alt="" width="10" height="6">
-                            </a>
-                        </div>
-                        <div class="header__nav_menu_item">
-                            <a href="">Посещения
-                                <img src="img/dropdown.png" alt="" width="10" height="6">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="header__nav_search">
-                        <a href="">
-                            <i class="search material-icons md-light md-18">search</i>
+            <div class="header__logo">
+
+            </div>
+            <div class="header__nav">
+                <div class="header__nav_menu" ng-hide="goForm">
+                    <div class="header__nav_menu_item">
+                        <a href="">Ссылки
+                            <img src="img/dropdown.png" alt="" width="10" height="6">
                         </a>
                     </div>
-                    <div class="header__nav_circle">
-                        <a href="">
-                            <i class="material-icons md-light md-20">add_circle</i>
+                    <div class="header__nav_menu_item">
+                        <a href="">Контакты </a>
+                    </div>
+                    <div class="header__nav_menu_item">
+                        <a href="">Теги
+                            <img src="img/dropdown.png" alt="" width="10" height="6">
+                        </a>
+                    </div>
+                    <div class="header__nav_menu_item">
+                        <a href="">Просьбы
+                            <img src="img/dropdown.png" alt="" width="10" height="6">
+                        </a>
+                    </div>
+                    <div class="header__nav_menu_item">
+                        <a href="">Избранное
+                            <img src="img/dropdown.png" alt="" width="10" height="6">
+                        </a>
+                    </div>
+                    <div class="header__nav_menu_item">
+                        <a href="">Посещения
+                            <img src="img/dropdown.png" alt="" width="10" height="6">
                         </a>
                     </div>
                 </div>
-                <div class="header__alert">
-                    <div class="header__alert_mail">
-                        <a href="">
-                            <i class="material-icons md-light md-20">mail_outline</i>
-                        </a>
-                    </div>
-                    <div class="header__alert_bell">
-                        <a href="">
-                            <i class="material-icons md-light md-20">notifications_none</i>
-                        </a>
-                    </div>
-                    <div class="header__alert_layer"></div>
+                <div class="header__nav_search" ng-hide="goForm">
+                    <a href ng-click="goForm = !goForm">
+                        <i class="search material-icons md-light md-18">search</i>
+                    </a>
                 </div>
+                <form action="" ng-show="goForm" class="header__nav_form">
+
+                    <i class="icon search material-icons md-grey md-20">search</i>
+                    <i class="clear material-icons md-14 md-blue ">clear</i>
+                    <input type="search" name="q" id="search" class="header__nav_form-text">
+                    <button class="header__nav_form-btn">НАЙТИ</button>
+                </form>
+                <div class="header__nav_circle">
+                    <a href >
+                        <i class="material-icons md-light md-20">add_circle</i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__alert">
+                <div class="header__alert_mail">
+                    <a href="">
+                        <i class="material-icons md-light md-20">mail_outline</i>
+                    </a>
+                </div>
+                <div class="header__alert_bell">
+                    <a href="">
+                        <i class="material-icons md-light md-20">notifications_none</i>
+                    </a>
+                </div>
+                <div class="header__alert_layer"></div>
+            </div>
             
         </div>
     </div>
+    
 </body>
 </html>
