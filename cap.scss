@@ -163,6 +163,7 @@ body{
                 
             }
             &-btn{
+                cursor: pointer;
                 padding: 0;
                 padding-top:  1px;
                 margin-left: -5px;
@@ -197,7 +198,32 @@ body{
             top: 13px;
             right: 85px;
         }
-        
+        &_bigform{
+        position: absolute;
+          background:white;
+          width: 422px;
+          height: 162px;
+          bottom: -166px;
+          display: none;
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          padding:16px 20px;
+          &-text{
+              margin-left: 20px;
+              width: 312px;
+              height: 37px;
+              border: 1px solid rgb(196, 206, 213);
+          }
+        }
+        &_bigform input#text{
+            padding-left: 10px;
+        }
+        &_bigform input#checkbox{
+            padding-left: 10px;
+            background: none;
+        }
+        &_bigform:hover{
+            display: block;
+        }
     } 
     
     &__alert{
@@ -216,6 +242,9 @@ body{
         }
         @media only screen and (max-width: 1280px) {
             margin-left: 230px;
+        }
+        @media only screen and (max-width: 1266px) {
+            margin-left: 200px;
         }
         
         @media only screen and (max-width: 1024px) {
@@ -271,4 +300,8 @@ body{
 }
 .md-blue{
     color: rgb(68, 79, 98);
+} 
+
+.myFocus{  
+  display:block; 
 } 

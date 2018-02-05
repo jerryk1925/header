@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <style>
         * {
             box-sizing: border-box;
@@ -582,7 +583,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="header__nav_search" ng-hide="goForm">
+                <div class="header__nav_search" ng-hide="goForm" >
                     <a href ng-click="goForm = !goForm">
                         <i class="search material-icons md-light md-18">search</i>
                     </a>
@@ -591,19 +592,31 @@
 
                     <i class="icon search material-icons md-grey md-20">search</i>
                     <i class="clear material-icons md-14 md-blue ">clear</i>
-                    <input type="search" name="q" id="search" class="header__nav_form-text">
+                    <input type="search" name="q" id="search" class="header__nav_form-text"  ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false" >
                     <button class="header__nav_form-btn">НАЙТИ</button>
                 </form>
+                <div class="header__nav_bigform" ng-class="{ myFocus: focus, myBlur: blur}" >
+                    <input type="checkbox" id="checkbox" class="header__nav_bigform-check" > мои
+                    <input type="text" id="text" placeholder="Автор" class="header__nav_bigform-text" >
+                    Cортировать по:
+                    <select disabled>
+                         <option>Дате</option>
+                         <option>Имени</option>
+                    </select><br>
+                    <input type="checkbox"  > я участник
+                    <input type="checkbox"  > в заголовке
+                    <input type="checkbox"  > строгий поиск
+                </div>
                 <div class="header__nav_circle">
                     <a href >
-                        <i class="material-icons md-light md-20">add_circle</i>
+                        <i class="material-icons md-light md-20" >add_circle</i>
                     </a>
                 </div>
             </div>
             <div class="header__alert">
                 <div class="header__alert_mail">
                     <a href="">
-                        <i class="material-icons md-light md-20">mail_outline</i>
+                        <i class="material-icons md-light md-20" >mail_outline</i>
                     </a>
                 </div>
                 <div class="header__alert_bell">
@@ -615,6 +628,7 @@
             </div>
             
         </div>
+
     </div>
     
 </body>
