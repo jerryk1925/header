@@ -502,7 +502,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Header</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="cap.css">
@@ -510,38 +510,38 @@
 <body ng-app="">
     <div class="header__wrapper">
         <div class="header">
-            <div class="header__hamburger">
-                <input type="checkbox" id="hmt" class="hidden-menu-ticker">
+            <div class="header__hamburger" ng-hide="goForm">
+                <input type="checkbox" id="hmt" class="hidden-menu-ticker" >
                 <label class="btn-menu" for="hmt">
                     <span class="first"></span>
                     <span class="second"></span>
                     <span class="third"></span>
                 </label>
                 <ul class="hidden-menu">
-                    <div class="header__menu_item">
+                    <div class="header__nav_menu_item">
                         <a href="">Ссылки
                             <img src="img/dropdown.png" salt="" width="10" height="6">
                         </a>
                     </div>
-                    <div class="header__menu_item">
+                    <div class="header__nav_menu_item">
                         <a href="">Контакты </a>
                     </div>
-                    <div class="header__menu_item">
+                    <div class="header__nav_menu_item">
                         <a href="">Теги
                             <img src="img/dropdown.png" alt="" width="10" height="6">
                         </a>
                     </div>
-                    <div class="header__menu_item">
+                    <div class="header__nav_menu_item">
                         <a href="">Просьбы
                             <img src="img/dropdown.png" alt="" width="10" height="6">
                         </a>
                     </div>
-                    <div class="header__menu_item">
+                    <div class="header__nav_menu_item">
                         <a href="">Избранное
                             <img src="img/dropdown.png" alt="" width="10" height="6">
                         </a>
                     </div>
-                    <div class="header__menu_item">
+                    <div class="header__nav_menu_item">
                         <a href="">Посещения
                             <img src="img/dropdown.png" alt="" width="10" height="6">
                         </a>
@@ -588,25 +588,41 @@
                         <i class="search material-icons md-light md-18">search</i>
                     </a>
                 </div>
+                <!-- Search form -->
                 <form action="" ng-show="goForm" class="header__nav_form">
 
                     <i class="icon search material-icons md-grey md-20">search</i>
                     <i class="clear material-icons md-14 md-blue ">clear</i>
-                    <input type="search" name="q" id="search" class="header__nav_form-text"  ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=false" >
+                    <input type="search" name="q" id="search" class="header__nav_form-text"  ng-focus="focus=true;blur=false;" ng-blur="blur=true;focus=true" >
+                    
                     <button class="header__nav_form-btn">НАЙТИ</button>
                 </form>
+               
+                <!-- Filter form -->
                 <div class="header__nav_bigform" ng-class="{ myFocus: focus, myBlur: blur}" >
-                    <input type="checkbox" id="checkbox" class="header__nav_bigform-check" > мои
+
+                    <input type="checkbox" id="checkbox0" class="header__nav_bigform-check" >
+                    <label for="checkbox0">мои</label> 
                     <input type="text" id="text" placeholder="Автор" class="header__nav_bigform-text" >
-                    Cортировать по:
-                    <select disabled>
-                         <option>Дате</option>
-                         <option>Имени</option>
-                    </select><br>
-                    <input type="checkbox"  > я участник
-                    <input type="checkbox"  > в заголовке
-                    <input type="checkbox"  > строгий поиск
+                    <div class="header__nav_bigform-sort">
+                        Cортировать по:
+                        <select >
+                            <option>дате</option>
+                            <option>релевантности</option>
+                        </select>
+                    </div>
+                  
+                    <input type="checkbox"  id="checkbox1">
+                     <label for="checkbox1" class="header__nav_bigform-check1"> я участник</label><br>
+                    <input type="checkbox"id="checkbox2" > 
+                    <label for="checkbox2" class="header__nav_bigform-check2"> в заголовке</label>
+                    <input type="checkbox"  id="checkbox4" > 
+                    <label for="checkbox4" class="header__nav_bigform-check4"> в контактах</label>
+                    <input type="checkbox"  id="checkbox3" > 
+                    <label for="checkbox3" class="header__nav_bigform-check3"> строгий поиск</label>
+                    
                 </div>
+                <!-- Filter form -->
                 <div class="header__nav_circle">
                     <a href >
                         <i class="material-icons md-light md-20" >add_circle</i>
@@ -623,6 +639,9 @@
                     <a href="">
                         <i class="material-icons md-light md-20">notifications_none</i>
                     </a>
+                    <div class="header__alert_bell-squere">
+                        18
+                    </div>
                 </div>
                 <div class="header__alert_layer"></div>
             </div>

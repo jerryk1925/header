@@ -76,7 +76,12 @@ body{
             }
             @media only screen and (max-width: 414px) {
                 margin-left: 135px;
-                width: 18px;
+                margin: 0;
+                width: 400px;
+                position: absolute;
+                height: 40px;
+                top:8px;
+                right: 5px;
             }
             
         &_menu{
@@ -129,6 +134,9 @@ body{
         &_search{
             width: 18px;
             height: 18px;
+            @media only screen and (max-width: 414px) {
+                padding-left: 350px;
+            }
         }
         &_circle{
             width: 20px;
@@ -147,8 +155,12 @@ body{
             @media only screen and (max-width: 1024px) {
                 width: 570px; 
             }
+            @media only screen and (max-width: 414px) {
+                 height: 40px;
+            }
             &-text{
-                
+                border-top-left-radius: 2px ;
+                border-bottom-left-radius: 2px;
                 height: 40px;
                 border: none;
                 padding: 0;
@@ -160,9 +172,13 @@ body{
                 @media only screen and (max-width: 1024px) {
                     width: 500px; 
                 }
-                
+                @media only screen and (max-width: 414px) {
+                    width: 328px;
+                }    
             }
             &-btn{
+                border-top-right-radius: 2px ;
+                border-bottom-right-radius: 2px;
                 cursor: pointer;
                 padding: 0;
                 padding-top:  1px;
@@ -180,6 +196,11 @@ body{
                 @media only screen and (max-width: 1024px) {
                     width: 70px; 
                 }
+                @media only screen and (max-width: 414px) {
+                    width: 70px;
+                    padding-top: 2px;
+                    margin-left: -5px;
+                } 
             }
         }
         &_form input#search{
@@ -199,6 +220,7 @@ body{
             right: 85px;
         }
         &_bigform{
+            z-index: 10;
         position: absolute;
           background:white;
           width: 422px;
@@ -207,12 +229,57 @@ body{
           display: none;
           box-shadow: 0 0 10px rgba(0,0,0,0.5);
           padding:16px 20px;
+          @media only screen and (max-width: 414px) {
+            width: 390px;
+            height: 252px;
+            bottom: -256px;
+            right:8px;
+            
+        }
           &-text{
               margin-left: 20px;
+            font-size: 12px;
+            font-family: "Roboto";
               width: 312px;
               height: 37px;
               border: 1px solid rgb(196, 206, 213);
+              @media only screen and (max-width: 414px) {
+                margin-left: 15px;
+                width: 285px;
+                
+            }
           }
+          &-sort{
+              margin-top: 15px;
+              margin-bottom: 20px;
+            font-size: 12px;
+            font-family: "Roboto";
+            color: rgb(0, 0, 0);
+            
+            
+          }
+          label {
+            
+            font-size: 12px;
+            font-family: "Roboto";
+            color: rgb(33, 33, 33);
+            
+            
+          }
+          select{
+              padding-left: 12px;
+              margin-left: 25px;
+            font-size: 13px;
+            font-family: "Roboto";
+            color: rgb(68, 68, 68);
+            height: 37px;
+            width: 144px;
+            border: 1px solid rgb(211, 211, 211);
+            background: rgb(242, 242, 242);
+            border-radius: 2px;
+          }
+
+          
         }
         &_bigform input#text{
             padding-left: 10px;
@@ -220,6 +287,27 @@ body{
         &_bigform input#checkbox{
             padding-left: 10px;
             background: none;
+           
+        }
+        
+
+        &_bigform-check2{
+           
+            padding: 0  30px;
+            @media only screen and (max-width: 414px) {
+                display: block;
+                margin-top: 12px;
+               padding: 0;
+              
+    
+            }
+        }
+        &_bigform-check4{
+            display: none;
+            @media only screen and (max-width: 414px) {
+                display: block;
+                margin: 12px 0;
+            }
         }
         &_bigform:hover{
             display: block;
@@ -268,6 +356,24 @@ body{
             margin-bottom: 2px; 
             height: 19px;
             padding-right: 20px;
+            position: relative;
+            z-index: 1;
+            &-squere{
+                position: absolute;
+                background: rgb(183, 24, 38);
+                text-align: center;
+                height: 13px;
+                width: 13px;
+                font-size: 10px;
+                font-family: "Roboto";
+                color: rgb(255, 255, 255);
+                top:-4px;
+                right: 17px;
+                @media only screen and (max-width: 414px) {
+                    right: -4px;
+                    z-index: 2;
+                    }
+            }
             @media only screen and (max-width: 414px) {
                 margin-left: 110px;
                 padding: 0;
@@ -305,3 +411,38 @@ body{
 .myFocus{  
   display:block; 
 } 
+
+.header__nav_bigform input[type=checkbox] {display: none;}
+
+.header__nav_bigform input[type=checkbox] + label:before {
+    content: "\2713";
+    color: transparent;
+    display: inline-block;
+    border: 2px solid rgb(211, 211, 211);
+    font-size: 12px;    
+    line-height: 14px;
+    margin: -5px 5px 0 0;
+    height: 14px;
+    width: 14px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    border-radius: 1px;
+}
+
+.header__nav_bigform input[type=checkbox]:checked + label:before {
+    color: white;
+  background:rgb(143, 192, 79);
+  border: 2px solid rgb(143, 192, 79);
+  
+}
+
+br{
+    display: none;
+    @media only screen and (max-width: 414px) {
+        display: block;
+       
+        
+    }
+}
+
